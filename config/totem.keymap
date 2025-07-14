@@ -80,7 +80,7 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <SYM NAV>;
+            if-layers = <NUMB NAV>;
             then-layer = <TRI>;
         };
     };
