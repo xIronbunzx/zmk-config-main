@@ -11,8 +11,8 @@
 #define NUMB 	1
 #define NAV		2
 #define SYS		3
-#define NUE		4
-#define MOUSE	5
+#define MOUSE	4
+
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4 LB5  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RB5 // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
@@ -126,23 +126,13 @@
         nav_layer {
             label = "NAV";
             bindings = <
-				&none  			&kp N7  		&kp N8  		&kp N9  		&kp C_BRI_UP    			&none     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &none
-				&none  			&kp N4  		&kp N5  		&kp N6  		&kp C_BRI_DN    			&kp LEFT  &kp DOWN      &kp UP        &kp RIGHT   &none
-		&none 	&none  			&kp N1  		&kp N2  		&kp N3  		&none           			&none     &none         &none         &none       &none  &to BASE
-												&none   		&kp N0  		&none           			&none     &trans        &trans
+				&none  		&kp C_VOL_DN  	&kp C_VOL_UP	&kp C_MUTE		&kp C_BRI_UP    			&none     	&none	 	&none		&none    	&none
+				&none  		&none  			&none  			&none  			&kp C_BRI_DN    			&none		&kp LEFT	&kp UP		&kp RIGHT   &none
+		&none 	&none  		&none	  		&none	  		&none	  		&none           			&none     	&none		&kp DOWN	&none       &none  	&none
+											&none   		&none	  		&none           			&none     	&trans		&trans
             >;
         };
 
-        hands_down_nue {
-            label = "NUE";
-            bindings = <
-				&kp W  &kp F  &kp M          &kp P          &kp V           						&kp J         &kp DOT      &kp Q        &kp SQT  &kp Z
-				&kp R  &kp S  &hml LCTRL N   &hml LGUI T    &kp B           						&kp COMMA     &hmr RGUI A  &hmr RCTRL E &kp I    &kp H
-	&to BASE 	&kp X  &kp C  &kp L          &kp D          &kp G           						&kp UNDER     &kp U        &kp O        &kp Y    &kp K  &to NAV
-							  &hml LALT TAB  &lt NUMB SPACE  &none           						&sk_shft      &lt NAV RET  &kp BSPC
-            >;
-        };
-		
 		adjust_layer {
             label = "SYS";
             bindings = <
@@ -156,7 +146,7 @@
 		mouse_layer {
             label = "MOUSE";
             bindings = <
-				&kp TAB  	&trans   	&trans  	&trans		&trans    					&msc SCRL_UP  		&trans  		&trans  			&trans  			&trans
+				&trans   	&trans   	&trans  	&trans		&trans    					&msc SCRL_UP  		&trans  		&trans  			&trans  			&trans
 				&trans		&trans		&trans		&trans		&trans						&msc SCRL_DOWN  	&mmv MOVE_LEFT 	&mmv MOVE_UP  		&mmv MOVE_RIGHT	 	&trans
 	&trans  	&trans		&trans		&trans		&trans      &trans    					&msc SCRL_LEFT		&msc SCRL_RIGHT	&mmv MOVE_DOWN	 	&trans  			&trans  	&trans
 										&trans		&mkp MB4    &mkp MB5   					&mkp LCLK   		&mkp MCLK  		&mkp RCLK
