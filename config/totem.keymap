@@ -127,12 +127,22 @@
 				&kp W  &kp F  &kp M          &kp P          &kp V           						&kp J         &kp DOT      &kp Q        &kp SQT  &kp Z
 				&kp R  &kp S  &hml LCTRL N   &hml LGUI T    &kp B           						&kp COMMA     &hmr RGUI A  &hmr RCTRL E &kp I    &kp H
 	&to BASE 	&kp X  &kp C  &kp L          &kp D          &kp G           						&kp UNDER     &kp U        &kp O        &kp Y    &kp K  &to NAV
-							  &hml LALT TAB  &lt SYM SPACE  &none           						&sk_shft      &lt NAV RET  &kp BSPC
+							  &hml LALT TAB  &lt NUMB SPACE  &none           						&sk_shft      &lt NAV RET  &kp BSPC
             >;
         };
 		
 		adjust_layer {
             label = "TRI";
+            bindings = <
+				&sys_reset   &bt BT_CLR    &out OUT_TOG  &trans										&trans    &kp F12  &kp F7  &kp F8  &kp F9  &trans
+				&bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans						&kp F11  &kp F4  &kp F5  &kp F6  &trans
+	&trans  	&trans       &trans        &trans        &trans        &trans    					&kp F10	&kp F1  &kp F2  &kp F3  &trans  &trans
+										   &trans        &trans        &trans    					&trans   &trans  &trans
+            >;
+        };
+		
+		mouse_layer {
+            label = "MOUSE";
             bindings = <
 				&sys_reset   &bt BT_CLR    &out OUT_TOG  &trans										&trans    &kp F12  &kp F7  &kp F8  &kp F9  &trans
 				&bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans						&kp F11  &kp F4  &kp F5  &kp F6  &trans
