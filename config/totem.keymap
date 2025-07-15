@@ -96,6 +96,7 @@
             bindings = <&kp TAB>;
         };
 		
+		
     };
 	
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄	
@@ -108,8 +109,8 @@
         };
 		
 		game_layer {
-            if-layers = <NUMB NAV>;
-            then-layer = <SYS>;
+            if-layers = <FKEYS NUMB>;
+            then-layer = <GAME>;
         };
 		
     };
@@ -143,8 +144,8 @@
             bindings = <
 				&kp F1			&kp F2			&kp F3  		&kp F4   		&kp F5    				&kp F6  	  	&kp F7  		&kp F8  		&kp F9		&kp F10
 				&trans  		&trans			&trans			&trans			&kp F11    				&kp F12  		&trans  		&trans 			&trans  	&trans
-	&kp UNDER  	&kp CARET   	&kp AMPS   		&kp STAR    	&kp LPAR     	&kp RPAR    			&trans  		&trans 			&trans  		&trans  	&trans   		&trans
-												&trans    		&kp RSHFT  	 	&trans     				&trans     		&kp KP_DOT   	&kp KP_N0
+	&trans  	&trans   		&trans   		&trans   		&trans     		&trans    				&trans  		&trans 			&trans  		&trans  	&trans   		&trans
+												&trans    		&trans  	 	&trans     				&trans     		&trans   		&trans
             >;
         };		
 
@@ -168,36 +169,32 @@
             >;
         };
 
-
-		
-		
-
 		game_layer {
 			label = "GAME";
 			bindings = <
-				&kp N1				&kp N2			&kp N3			&kp N4			&kp N5					&trans		&trans		&trans		&trans		&trans  
-				&kp LEFT_SHIFT  	&kp Q  			&kp W			&kp E			&kp R           		&trans		&trans		&trans		&trans		&trans  
-	&kp GRAVE	&kp LCTRL       	&kp A  			&kp S       	&kp D			&kp F           		&trans		&trans		&trans		&trans		&trans		&trans
-													&kp LALT    	&lt 9 ESCAPE  	&kp SPACE        		&trans		&trans		&trans
+				&kp N1				&kp N2			&kp N3			&kp N4				&kp N5					&trans		&trans		&trans		&trans		&trans  
+				&kp LEFT_SHIFT  	&kp Q  			&kp W			&kp E				&kp R           		&trans		&trans		&trans		&trans		&trans  
+	&kp GRAVE	&kp LCTRL       	&kp A  			&kp S       	&kp D				&kp F           		&trans		&trans		&trans		&trans		&trans		&to BASE
+													&kp LALT    	&lt GAMEP ESCAPE  	&kp SPACE        		&trans		&trans		&trans
 				>;
 		};
 
 		gameplus_layer {
 			label = "GAMEP";
 			bindings = <
-				&kp F1			&kp F2  	&kp F3		  	&kp F4		&kp F5        		&trans		&trans		&trans		&trans		&trans  
-				&trans        	&trans		&trans        	&trans      &trans				&trans		&trans		&trans		&trans		&trans  
-	&trans		&trans       	&kp Z		&kp X			&kp C       &kp V				&trans		&trans		&trans  &trans  &trans
-												&kp ESCAPE    &trans	&trans              &trans  &trans  &trans
+				&kp F1			&kp F2  	&kp F3		  	&kp F4		&kp F5        							&trans		&trans		&trans		&trans		&trans  
+				&trans        	&trans		&trans        	&trans      &trans									&trans		&trans		&trans		&trans		&trans  
+	&trans		&trans       	&kp Z		&kp X			&kp C       &kp V									&trans		&trans		&trans  	&trans  	&trans		&to BASE
+											&kp ESCAPE    	&trans		&trans              					&trans  	&trans  	&trans
 				>;
 		};
 		
 		system_layer {
             label = "SYS";
             bindings = <
-				&trans		&sys_reset		&bt BT_CLR		&out OUT_TOG  &trans					&trans		&trans		&trans  	&trans		&sys_reset
-				&trans  	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2  &trans					&trans		&trans		&trans		&trans		&trans
-	&trans  &trans		&trans			&trans			&trans        &trans    				&trans		&trans		&trans		&trans		&trans		&bootloader
+				&trans		&sys_reset		&bt BT_CLR		&out OUT_TOG  &trans					&trans		&trans		&trans  	&bootloader		&sys_reset
+				&trans  	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2  &trans					&trans		&trans		&trans		&trans			&trans
+	&trans  	&trans		&trans			&trans			&trans        &trans    				&trans		&trans		&trans		&trans			&trans		&to BASE
 										    &trans        	&trans        &trans    				&trans		&trans		&trans
             >;
         };		
