@@ -12,9 +12,7 @@
 #define NAV		2
 #define FKEYS	3
 #define MOUSE	4
-#define GAME	5
-#define GAMEP	6
-#define SYS		7
+#define SYS		5
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4 LB5  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RB5 // right-hand keys
@@ -108,11 +106,6 @@
             then-layer = <SYS>;
         };
 		
-		game_layer {
-            if-layers = <FKEYS NUMB>;
-            then-layer = <GAME>;
-        };
-		
     };
 	
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -168,26 +161,6 @@
 										&trans		&mkp MB4    &mkp MB5   					&mkp LCLK   		&mkp MCLK  		&mkp RCLK
             >;
         };
-
-		game_layer {
-			label = "GAME";
-			bindings = <
-				&kp N1				&kp N2			&kp N3			&kp N4				&kp N5					&trans		&trans		&trans		&trans		&trans  
-				&kp LEFT_SHIFT  	&kp Q  			&kp W			&kp E				&kp R           		&trans		&trans		&trans		&trans		&trans  
-	&kp GRAVE	&kp LCTRL       	&kp A  			&kp S       	&kp D				&kp F           		&trans		&trans		&trans		&trans		&trans		&to BASE
-													&kp LALT    	&lt GAMEP ESCAPE  	&kp SPACE        		&trans		&trans		&trans
-				>;
-		};
-
-		gameplus_layer {
-			label = "GAMEP";
-			bindings = <
-				&kp F1			&kp F2  	&kp F3		  	&kp F4		&kp F5        							&trans		&trans		&trans		&trans		&trans  
-				&trans        	&trans		&trans        	&trans      &trans									&trans		&trans		&trans		&trans		&trans  
-	&trans		&trans       	&kp Z		&kp X			&kp C       &kp V									&trans		&trans		&trans  	&trans  	&trans		&to BASE
-											&kp ESCAPE    	&trans		&trans              					&trans  	&trans  	&trans
-				>;
-		};
 		
 		system_layer {
             label = "SYS";
